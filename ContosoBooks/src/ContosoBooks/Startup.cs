@@ -34,7 +34,7 @@ namespace ContosoBooks
             services.AddEntityFramework()
                 .AddSqlServer()
                 .AddDbContext<ContosoBooksDbContext>(options =>
-                    options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ContosoBooksDbContext-16f320ef-4f29-4811-ba5e-a1e6d05a6875;Trusted_Connection=True;MultipleActiveResultSets=true"));
+                    options.UseSqlServer(Configuration["Data:ContosoBooksConnection:ConnectionString"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
