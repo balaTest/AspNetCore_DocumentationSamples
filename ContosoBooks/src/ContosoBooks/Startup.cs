@@ -7,6 +7,8 @@ using Microsoft.AspNet.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Data.Entity;
+using ContosoBooks.Models;
 
 namespace ContosoBooks
 {
@@ -28,6 +30,11 @@ namespace ContosoBooks
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddEntityFramework()
+                .AddSqlServer()
+                .AddDbContext<ContosoBooksDbContext>(options =>
+                    options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ContosoBooksDbContext-16f320ef-4f29-4811-ba5e-a1e6d05a6875;Trusted_Connection=True;MultipleActiveResultSets=true"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +63,8 @@ namespace ContosoBooks
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            //SampleData.Initialize(app.ApplicationServices);
         }
 
         // Entry point for the application.
