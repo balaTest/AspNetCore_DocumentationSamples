@@ -5,16 +5,6 @@ namespace ContosoBooks.Models
 {
     public class ContosoBooksDbContext : DbContext
     {
-        private static bool _created = false;
-
-        public ContosoBooksDbContext()
-        {
-            if (!_created)
-            {
-                _created = true;
-                Database.EnsureCreated();
-            }
-        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
