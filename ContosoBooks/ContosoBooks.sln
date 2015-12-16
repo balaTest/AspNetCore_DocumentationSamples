@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9D74DF9E-9AE7-49C9-BE18-B22C1044A95C}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		README.txt = README.txt
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ContosoBooks", "src\ContosoBooks\ContosoBooks.xproj", "{A94476BC-77FD-42C8-BA9A-46B000686C40}"
