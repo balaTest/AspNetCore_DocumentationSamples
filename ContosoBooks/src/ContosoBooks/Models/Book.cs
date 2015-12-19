@@ -1,11 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNet.Mvc;
 
 namespace ContosoBooks.Models
 {
     public class Book
     {
-        [ScaffoldColumn(false)]
+        [HiddenInput]
         public int BookID { get; set; }
+
         [Required]
         public string Title { get; set; }
 

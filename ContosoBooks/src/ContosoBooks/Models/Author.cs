@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNet.Mvc;
 
 namespace ContosoBooks.Models
 {
     public class Author
     {
-        [ScaffoldColumn(false)]
+        [HiddenInput]
         public int AuthorID { get; set; }
+
         [Required]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
