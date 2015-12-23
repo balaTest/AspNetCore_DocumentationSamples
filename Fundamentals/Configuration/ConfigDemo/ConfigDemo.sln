@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ConfigConsole", "src\ConfigConsole\ConfigConsole.xproj", "{0D7A15C2-2AEA-4745-92CC-655735003A94}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "UsingOptions", "src\UsingOptions\UsingOptions.xproj", "{39B05E36-AFC5-449A-B920-BF6D0C71E995}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +24,16 @@ Global
 		{0D7A15C2-2AEA-4745-92CC-655735003A94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D7A15C2-2AEA-4745-92CC-655735003A94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D7A15C2-2AEA-4745-92CC-655735003A94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39B05E36-AFC5-449A-B920-BF6D0C71E995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B05E36-AFC5-449A-B920-BF6D0C71E995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B05E36-AFC5-449A-B920-BF6D0C71E995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B05E36-AFC5-449A-B920-BF6D0C71E995}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0D7A15C2-2AEA-4745-92CC-655735003A94} = {FCEDBFAC-AD5B-423E-8A4A-C053ECBE4F5D}
+		{39B05E36-AFC5-449A-B920-BF6D0C71E995} = {FCEDBFAC-AD5B-423E-8A4A-C053ECBE4F5D}
 	EndGlobalSection
 EndGlobal
