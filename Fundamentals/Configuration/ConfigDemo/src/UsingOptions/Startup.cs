@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
+﻿using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
+using UsingOptions.Models;
 
 namespace UsingOptions
 {
@@ -15,6 +11,16 @@ namespace UsingOptions
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            // Setup options with DI
+            services.AddOptions();
+
+            // Configure MyOptions using code
+            services.Configure<MyOptions>(myOptions =>
+            {
+                myOptions.Option1 = "value1_from_action";
+                myOptions.Option2 = 2;
+            });
+
             // Add framework services.
             services.AddMvc();
 
