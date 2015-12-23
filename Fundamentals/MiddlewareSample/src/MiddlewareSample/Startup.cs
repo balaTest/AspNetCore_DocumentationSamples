@@ -107,6 +107,18 @@ namespace MiddlewareSample
             });
         }
 
+        public void ConfigureLogMiddleware(IApplicationBuilder app, ILoggerFactory loggerfactory)
+        {
+            loggerfactory.AddConsole(minLevel: LogLevel.Information);
+
+            app.UseRequestLogger();
+
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("Hello from " + _environment);
+            });
+        }
+
         // Entry point for the application.
         public static void Main(string[] args) => WebApplication.Run<Startup>(args);
     }
