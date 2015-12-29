@@ -11,7 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using DependencyInjectionSample.Models;
 using DependencyInjectionSample.Services;
-using DependencyInjectionSample.Interfaces;
 
 namespace DependencyInjectionSample
 {
@@ -55,6 +54,13 @@ namespace DependencyInjectionSample
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
             services.AddScoped<ICharacterRepository, CharacterRepository>();
+
+            // Show different lifetime options
+            services.AddTransient<IOperationTransient, Operation>();
+            services.AddScoped<IOperationScoped, Operation>();
+            services.AddSingleton<IOperationSingleton, Operation>();
+            services.AddInstance<IOperationInstance>(new Operation(Guid.Empty));
+            services.AddTransient<OperationService, OperationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
