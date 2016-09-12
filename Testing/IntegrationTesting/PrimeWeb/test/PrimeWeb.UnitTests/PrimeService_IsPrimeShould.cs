@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using PrimeWeb.Services;
 using Xunit;
 
-namespace PrimeWeb.UnitTests.Services
+namespace PrimeWeb.UnitTests
 {
     public class PrimeService_IsPrimeShould
     {

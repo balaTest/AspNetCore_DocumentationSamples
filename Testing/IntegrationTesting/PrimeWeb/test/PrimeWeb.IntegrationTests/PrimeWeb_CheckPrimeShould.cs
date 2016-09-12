@@ -1,19 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Microsoft.AspNet.TestHost;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.TestHost;
 using Xunit;
 
 namespace PrimeWeb.IntegrationTests
 {
-    public class PrimeWebCheckPrimeShould
+    public class PrimeWeb_CheckPrimeShould
     {
         private readonly TestServer _server;
         private readonly HttpClient _client;
-        public PrimeWebCheckPrimeShould()
+        public PrimeWeb_CheckPrimeShould()
         {
             // Arrange
-            _server = new TestServer(TestServer.CreateBuilder()
+            _server = new TestServer(new WebHostBuilder()
                 .UseStartup<Startup>());
             _client = _server.CreateClient();
         }

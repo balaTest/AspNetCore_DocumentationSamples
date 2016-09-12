@@ -1,6 +1,10 @@
-﻿using System.Net.Http;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
-using Microsoft.AspNet.TestHost;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.TestHost;
 using Xunit;
 
 namespace PrimeWeb.IntegrationTests
@@ -12,7 +16,7 @@ namespace PrimeWeb.IntegrationTests
         public PrimeWebDefaultRequestShould()
         {
             // Arrange
-            _server = new TestServer(TestServer.CreateBuilder()
+            _server = new TestServer(new WebHostBuilder()
                 .UseStartup<Startup>());
             _client = _server.CreateClient();
         }
