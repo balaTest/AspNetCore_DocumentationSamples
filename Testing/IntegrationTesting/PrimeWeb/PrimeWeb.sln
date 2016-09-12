@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D4C08D82-3863-45DA-B68A-24F4C997686C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC7CCB82-EB5A-4976-90CD-48FFA3ACEEC5}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PrimeWeb", "src\PrimeWeb\PrimeWeb.xproj", "{A1BA7F8F-D085-418A-BC34-D0D6994E318A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{052D510C-9EA0-4739-8006-63B723C57282}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PrimeWeb.UnitTests", "test\PrimeWeb.UnitTests\PrimeWeb.UnitTests.xproj", "{76725958-9F0F-4D04-8868-0A12258235BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1BA7F8F-D085-418A-BC34-D0D6994E318A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1BA7F8F-D085-418A-BC34-D0D6994E318A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1BA7F8F-D085-418A-BC34-D0D6994E318A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1BA7F8F-D085-418A-BC34-D0D6994E318A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76725958-9F0F-4D04-8868-0A12258235BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76725958-9F0F-4D04-8868-0A12258235BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76725958-9F0F-4D04-8868-0A12258235BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76725958-9F0F-4D04-8868-0A12258235BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A1BA7F8F-D085-418A-BC34-D0D6994E318A} = {D4C08D82-3863-45DA-B68A-24F4C997686C}
+		{76725958-9F0F-4D04-8868-0A12258235BC} = {052D510C-9EA0-4739-8006-63B723C57282}
+	EndGlobalSection
+EndGlobal
