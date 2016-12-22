@@ -84,7 +84,7 @@ namespace ContosoBooks.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("FirstMidName,LastName")] Author author)
+        public async Task<IActionResult> Edit(int id, [Bind("AuthorID,FirstMidName,LastName")] Author author)
         {
             if (id != author.AuthorID)
             {
