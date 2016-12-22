@@ -1,0 +1,19 @@
+﻿<environment names="Development">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+</environment>
+<environment names="Staging,Production">
+    <script src="//ajax.aspnetcdn.com/ajax/jquery/2.2.0/jquery.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jquery">
+    </script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.validation/1.14.0/jquery.validate.min.js"
+            asp-fallback-src="~/lib/jquery-validation/dist/jquery.validate.min.js"
+            asp-fallback-test="window.jquery && window.jquery.validator">
+    </script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"
+            asp-fallback-src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"
+            asp-fallback-test="window.jquery && window.jquery.validator && window.jquery.validator.unobtrusive">
+    </script>
+</environment>
