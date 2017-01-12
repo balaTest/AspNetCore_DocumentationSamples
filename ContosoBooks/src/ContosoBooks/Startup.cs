@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using ContosoBooks.Models;
 
 namespace ContosoBooks
 {
@@ -29,6 +27,9 @@ namespace ContosoBooks
         {
             // Add framework services.
             services.AddMvc();
+
+            services.AddDbContext<ContosoBooksDbContext>(options =>
+                    options.UseSqlServer(Configuration["Data:ContosoBooksDbContext:ConnectionString"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +56,8 @@ namespace ContosoBooks
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            SampleData.Initialize(app.ApplicationServices);
         }
     }
 }
